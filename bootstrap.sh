@@ -14,11 +14,11 @@ fi
 
 # 更新Homebrew到最新版本.
 echo "开始更新 Homebrew..."
-#brew update
+brew update
 
 # 安装git
 echo "开始安装 git..."
-#brew install git
+brew install git
 
 # 将dev-setup库下载到本地
 echo "开始复制dev-setup仓库到本地"
