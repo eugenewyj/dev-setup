@@ -9,6 +9,7 @@
 set nocompatible
 
 "安装 vundle
+set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 
 "========================================"
