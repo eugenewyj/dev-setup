@@ -9,8 +9,7 @@
 set nocompatible
 
 "安装 vundle
-"set rtp+=~/dotfiles/vim/vundle/
-"call vundle#rc()
+call vundle#rc()
 
 "========================================"
 "             vundle 管理的插件          "
@@ -18,9 +17,8 @@ set nocompatible
 " 插件列表需要放在设置插件配置选项前，因为
 " vundle只有看到Plugin命令后，才会将下载并
 " 将插件所在的文件夹加入到runtimepath中。
-"Plugin 'gmarik/vundle'
-"Plugin 'bling/vim-airline'
-"Plugin 'scrooloose/nerdtree'
+Plugin 'bling/vim-airline'
+Plugin 'scrooloose/nerdtree'
 
 "========================================"
 "               特殊设置                 "
@@ -33,10 +31,6 @@ set nocompatible
 "========================================"
 "               基本配置                 "
 "========================================"
-" 存储个性化配置文件,如：colors等。
-" 整个dotfiles是个git repo.
-"set rtp+=$HOME/dotfiles/vim
-
 " vim 自身命令行模式智能补全
 set wildmenu
 
@@ -87,9 +81,9 @@ nmap        <leader>p "+p               " 定义系统剪贴板粘贴快捷键
 "               插件配置                 "
 "========================================"
 " color schema 配置
-colorscheme molokai
+" colorscheme molokai
 
 " airline插件配置
-"set laststatus=2                        " 状态栏一直显示
-"let g:airline_powerline_fonts = 1
-"let g:airline_theme = 'tomorrow'
+set laststatus=2                        " 状态栏一直显示
+let g:airline_powerline_fonts = 1
+let g:airline_theme = 'tomorrow'
