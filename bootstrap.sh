@@ -22,4 +22,4 @@ brew install git
 
 # 将dev-setup库下载到本地
 echo "开始复制dev-setup仓库到本地"
-git clone https://github.com/fengbaoxp/dev-setup.git && cd dev-setup
+git clone https://github.com/fengbaoxp/dev-setup.git
