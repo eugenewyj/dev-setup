@@ -5,12 +5,12 @@
 "========================================="
 "                 前置条件                "
 "========================================="
-" 关闭vi兼容模式
-set nocompatible
+set nocompatible				" 去除VI一致性，用Vundle管理插件必须
+filetype off					" 关闭文件类型探测， 用Vundle管理插件必须
 
 "安装 vundle
 set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
+call vundle#begin()
 
 "========================================"
 "             vundle 管理的插件          "
