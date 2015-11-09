@@ -3,35 +3,50 @@
 " Email: fengbaoxp@gmail.com
 
 "========================================="
-"                 前置条件                "
+"            Vundle 管理的插件             "
 "========================================="
-set nocompatible				" 去除VI一致性，用Vundle管理插件必须
-filetype off					" 关闭文件类型探测， 用Vundle管理插件必须
+set nocompatible              			" 去除VI一致性,必须
+filetype off                  			" 必须
 
-"安装 vundle
-set rtp+=~/.vim/bundle/vundle/
+" 设置包括vundle和初始化相关的runtime path
+set rtp+=~/.vim/bundle/vundle
 call vundle#begin()
+" 另一种选择, 指定一个vundle安装插件的路径
+"call vundle#begin('~/some/path/here')
 
-"========================================"
-"             vundle 管理的插件          "
-"========================================"
-" 插件列表需要放在设置插件配置选项前，因为
-" vundle只有看到Plugin命令后，才会将下载并
-" 将插件所在的文件夹加入到runtimepath中。
-Plugin 'bling/vim-airline'
+" ================ 主题插件 ===============
+" 主题 solarized
+Bundle 'altercation/vim-colors-solarized'
+let g:solarized_termtrans=1
+let g:solarized_contrast="normal"
+let g:solarized_visibility="normal"
+" let g:solarized_termcolors=256
+
+" 主题 molokai
+Bundle 'tomasr/molokai'
+" monokai原始背景色
+let g:molokai_original = 1
+
+" 主题 tomorrow
+Bundle 'chriskempson/vim-tomorrow-theme'
+
+
 Plugin 'scrooloose/nerdtree'
+Plugin 'bling/vim-airline'	
 
-"========================================"
-"               特殊设置                 "
-"========================================"
-" 启用文件类型探测，插件，缩排;
-" 这个需要放在Plugin命令后
-" filetype plugin indent on
+" 你的所有插件需要在下面这行之前
+call vundle#end()            			" 必须
+filetype plugin indent on    			" 必须 加载vim自带和插件相应的语法和文件类型相关脚本
+" 忽视插件改变缩进,可以使用以下替代:
+"filetype plugin on
 
 
 "========================================"
 "               基本配置                 "
 "========================================"
+inoremap jk <ESC>
+let mapleader = "\<Space>"
+
 " vim 自身命令行模式智能补全
 set wildmenu
 
@@ -72,17 +87,13 @@ set completeopt+=longest
 " 禁止折行
 set nowrap
 
-" 自定义快捷键
-let mapleader=";"                       " 定义快捷键前缀，即<leader>
-vnoremap    <leader>y "+y               " 定义系统剪贴板复制快捷键
-nmap        <leader>p "+p               " 定义系统剪贴板粘贴快捷键
-
-
 "========================================"
 "               插件配置                 "
 "========================================"
-" color schema 配置
-" colorscheme molokai
+" 主题设置
+set background=dark
+set t_Co=256
+colorscheme solarized
 
 " airline插件配置
 set laststatus=2                        " 状态栏一直显示
