@@ -2,57 +2,59 @@
 " 版本:  0.0.1
 " Email: fengbaoxp@gmail.com
 
-"========================================="
-"            Vundle 管理的插件             "
-"========================================="
-set nocompatible              			" 去除VI一致性,必须
-filetype off                  			" 必须
+"
+" vundle manage plugins
+"
+set nocompatible              			" be iMproved, required
+filetype off                  			" required
 
-" 设置包括vundle和初始化相关的runtime path
+" set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/vundle
 call vundle#begin()
-" 另一种选择, 指定一个vundle安装插件的路径
+" alternatively, pass a path where Vundle should install plugins
 "call vundle#begin('~/some/path/here')
 
-" ================ 主题插件 ===============
-" 主题 solarized
-Bundle 'altercation/vim-colors-solarized'
-let g:solarized_termtrans=1
-let g:solarized_contrast="normal"
-let g:solarized_visibility="normal"
-" let g:solarized_termcolors=256
+" let Vundle manage Vundle, required
+Plugin 'VundleVim/Vundle.vim'
 
-" 主题 molokai
-Bundle 'tomasr/molokai'
-" monokai原始背景色
-let g:molokai_original = 1
+Plugin 'altercation/vim-colors-solarized'
 
-" 主题 tomorrow
-Bundle 'chriskempson/vim-tomorrow-theme'
-
-
+Plugin 'tomasr/molokai'
+Plugin 'chriskempson/vim-tomorrow-theme'
 Plugin 'scrooloose/nerdtree'
 Plugin 'bling/vim-airline'	
 
-" 你的所有插件需要在下面这行之前
-call vundle#end()            			" 必须
-filetype plugin indent on    			" 必须 加载vim自带和插件相应的语法和文件类型相关脚本
-" 忽视插件改变缩进,可以使用以下替代:
+
+" All of your Plugins must be added before the following line
+call vundle#end()            			" required
+filetype plugin indent on    			" required
+" To ignore plugin indent changes, instead use:
 "filetype plugin on
+"
+" Brief help
+" :PluginList       - lists configured plugins
+" :PluginInstall    - installs plugins; append `!` to update or just :PluginUpdate
+" :PluginSearch foo - searches for foo; append `!` to refresh local cache
+" :PluginClean      - confirms removal of unused plugins; append `!` to auto-approve removal
+"
+" see :h vundle for more details or wiki for FAQ
+" Put your non-Plugin stuff after this line
 
 
-"========================================"
-"               基本配置                 "
-"========================================"
+"
+" settings
+"
+
 inoremap jk <ESC>
 let mapleader = "\<Space>"
+let g:mapleader = "\<Space>"
 
 " vim 自身命令行模式智能补全
 set wildmenu
 
-" 设置vim编码
+
 set encoding=utf-8
-set fileencoding=tuf-8
+set fileencoding=utf-8
 set fileencodings=ucs-bom,utf-8,cp936,gb18030,big5,euc-jp,euc-kr,latin1
 set langmenu=zh_CN.UTF-8
 language message zh_CN.UTF-8
@@ -87,15 +89,36 @@ set completeopt+=longest
 " 禁止折行
 set nowrap
 
-"========================================"
-"               插件配置                 "
-"========================================"
-" 主题设置
-set background=dark
-set t_Co=256
-colorscheme solarized
+"
+" plugin settings
+"
 
-" airline插件配置
+let g:solarized_termtrans=1
+let g:solarized_contrast="normal"
+let g:solarized_visibility="normal"
+let g:solarized_termcolors=256
+
+let g:molokai_original = 1
+
+
+colorscheme solarized
+set background=dark
+
+" NERDTree plugin
+nmap <leader>fl :NERDTreeToggle<CR>		" 映射快捷键
+let NERDTreeWinSize=35                  " NERDTree子窗口宽度
+let NERDTreeWinPos="left"               " NERDTree子窗口位置
+let NERDTreeShowHidden=1                " 显示隐藏文件
+let NERDTreeMinimalUI=1                 " 不显示冗余帮助信息
+let NERDTreeAutoDeleteBuffer=1          " 删除文件自动删除文件对应的buffer
+au VimEnter * NERDTreeToggle            " vim启动自动打开NERDTree子窗口
+" 使用帮助
+" 回车或o:  打开选中文件
+" r:        刷新工程目录文件列表
+" I(大写):  显示/隐藏 隐藏文件
+" m:        显示操作菜单
+
+" vim-airline plugin
 set laststatus=2                        " 状态栏一直显示
 let g:airline_powerline_fonts = 1
 let g:airline_theme = 'tomorrow'
