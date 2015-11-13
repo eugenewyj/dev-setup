@@ -22,6 +22,8 @@ Plugin 'tomasr/molokai'
 Plugin 'chriskempson/vim-tomorrow-theme'
 Plugin 'scrooloose/nerdtree'
 Plugin 'bling/vim-airline'	
+Plugin 'tpope/vim-surround'
+Plugin 'fatih/vim-go'
 
 
 " 你所有的插件必须加到这一行之前。
