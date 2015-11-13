@@ -97,7 +97,7 @@ set completeopt+=longest				" 根据当前输入，增量匹配上下文帮助�
 set nowrap								" 禁止折行
 
 if has("gui_macvim")
-  	set guifont=Monaco:h12
+  	set guifont=Monaco:h14
   	set clipboard+=unnamed
   	set vb t_vb=
   	set guioptions-=m  					" 隐藏菜单
