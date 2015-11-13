@@ -44,12 +44,25 @@ filetype plugin indent on    			" 必须
 " 基础设置
 "
 
-" 键映射
-inoremap jk <ESC>
-let mapleader = "\<Space>"
-let g:mapleader = "\<Space>"
+"http://stackoverflow.com/questions/20186975/vim-mac-how-to-copy-to-clipboard-without-pbcopy
+set clipboard^=unnamed
+set clipboard^=unnamedplus
 
 set wildmenu							" vim 自身命令行模式智能补全
+set noerrorbells                		" 关闭错误提醒音
+set showcmd                     		" 显示正在输入的内容
+set showmode                    		" 显示当前模式
+set noshowmatch                 		" Do not show matching brackets by flickering
+set incsearch                   		" 输入时高亮显示匹配内容
+set hlsearch                    		" 高亮匹配内容
+set ignorecase                  		" 搜索不区分大小写
+set smartcase                   		" ... 但是如果搜索字符串包含大写字母时区分大小写
+set ttyfast
+set ttymouse=xterm2
+set ttyscroll=3
+set lazyredraw          	    		" Wait to redraw "
+set splitright                  		" Split vertical windows right to the current windows
+set splitbelow                  		" Split horizontal windows below to the current windows
 
 " 设置文件、buffer编码
 set encoding=utf-8
@@ -57,6 +70,11 @@ set fileencoding=utf-8
 set fileencodings=ucs-bom,utf-8,cp936,gb18030,big5,euc-jp,euc-kr,latin1
 set langmenu=zh_CN.UTF-8
 language message zh_CN.UTF-8
+set fileformats=unix,dos,mac    		" 文件格式优先Unix，之后Windows，最后mac
+set noswapfile                  		" 不生产swap文件
+set nobackup            	    		" 不产生任何备份文件
+set autowrite                   		" 在执行:next, :make etc之前自动保存
+set autoread                    		" 自动加载文件变动，不进行任何询问
 
 set smartindent							" 自动缩进，每个tab占四个字符，并且4个空格代替tab。
 set tabstop=4                           " 设置编辑时制表符占用空格数
@@ -78,28 +96,47 @@ set backspace=indent,eol,start 			" 启用backspace删除字符功能，并且�
 set completeopt+=longest				" 根据当前输入，增量匹配上下文帮助提示内容。
 set nowrap								" 禁止折行
 
+if has("gui_macvim")
+  	set guifont=Monaco:h12
+  	set clipboard+=unnamed
+  	set vb t_vb=
+  	set guioptions-=m  					" 隐藏菜单
+  	set guioptions-=T  					" 隐藏工具栏
+  	set guioptions-=l
+  	set guioptions-=L
+  	set guioptions-=r  					" 隐藏滚动条
+  	set guioptions-=R
+
+	let g:solarized_termtrans=1			" solarized主题插件配置
+	let g:solarized_contrast="normal"
+	let g:solarized_visibility="normal"
+	let g:solarized_termcolors=256
+	
+	let g:molokai_original = 1			" molokai主题插件配置
+
+	let macvim_skip_colorscheme=1
+	colorscheme solarized 				" 设置主题
+"	colorscheme molokai
+	set background=dark					" 主题色调
+else
+
+endif
+
+" 键映射
+inoremap jk <ESC>
+let mapleader = "\<Space>"
+let g:mapleader = "\<Space>"
+
 
 "
 " 插件相关设置
 "
 
-" solarized主题插件配置
-let g:solarized_termtrans=1
-let g:solarized_contrast="normal"
-let g:solarized_visibility="normal"
-let g:solarized_termcolors=256
-
-" molokai主题插件配置
-let g:molokai_original = 1
-
-colorscheme solarized 					" 设置主题
-set background=dark						" 主题色调
-
 " NERDTree插件设置
 nmap <leader>fl :NERDTreeToggle<CR>		" 映射快捷键
 let NERDTreeWinSize=35                  " NERDTree子窗口宽度
 let NERDTreeWinPos="left"               " NERDTree子窗口位置
-let NERDTreeShowHidden=1                " 显示隐藏文件
+"let NERDTreeShowHidden=1                " 显示隐藏文件
 let NERDTreeMinimalUI=1                 " 不显示冗余帮助信息
 let NERDTreeAutoDeleteBuffer=1          " 删除文件自动删除文件对应的buffer
 au VimEnter * NERDTreeToggle            " vim启动自动打开NERDTree子窗口
