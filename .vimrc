@@ -3,108 +3,99 @@
 " Email: fengbaoxp@gmail.com
 
 "
-" vundle manage plugins
+" 使用Vundle管理插件
 "
-set nocompatible              			" be iMproved, required
-filetype off                  			" required
+set nocompatible              			" 不兼容vi, 必须
+filetype off                  			" 必须
 
-" set the runtime path to include Vundle and initialize
+" 将Vundle目录加入到runtime路径，并初始化。
 set rtp+=~/.vim/bundle/vundle
 call vundle#begin()
-" alternatively, pass a path where Vundle should install plugins
+" 另一种选择是, 传递一个Vundle安装插件的路径。
 "call vundle#begin('~/some/path/here')
 
-" let Vundle manage Vundle, required
+" l让Vundle管理Vundle自己, 必须
 Plugin 'VundleVim/Vundle.vim'
 
 Plugin 'altercation/vim-colors-solarized'
-
 Plugin 'tomasr/molokai'
 Plugin 'chriskempson/vim-tomorrow-theme'
 Plugin 'scrooloose/nerdtree'
 Plugin 'bling/vim-airline'	
 
 
-" All of your Plugins must be added before the following line
-call vundle#end()            			" required
-filetype plugin indent on    			" required
-" To ignore plugin indent changes, instead use:
+" 你所有的插件必须加到这一行之前。
+call vundle#end()            			" 必须
+filetype plugin indent on    			" 必须
+" 为了忽略插件缩进变化，用下面这行代替上面哪一行内容:
 "filetype plugin on
 "
-" Brief help
-" :PluginList       - lists configured plugins
-" :PluginInstall    - installs plugins; append `!` to update or just :PluginUpdate
-" :PluginSearch foo - searches for foo; append `!` to refresh local cache
-" :PluginClean      - confirms removal of unused plugins; append `!` to auto-approve removal
+" 简要的帮助说明
+" :PluginList       - 罗列配置的插件列表
+" :PluginInstall    - 安装插件; 后面加 `!` 更新插件，也可以直接使用:PluginUpdate
+" :PluginSearch foo - s搜索插件foo; 后面加 `!` 搜索时刷新局部缓存
+" :PluginClean      - 清理不用的插件，需确认; 后面加 `!` 自动确认删除
 "
 " see :h vundle for more details or wiki for FAQ
 " Put your non-Plugin stuff after this line
 
 
 "
-" settings
+" 基础设置
 "
 
+" 键映射
 inoremap jk <ESC>
 let mapleader = "\<Space>"
 let g:mapleader = "\<Space>"
 
-" vim 自身命令行模式智能补全
-set wildmenu
+set wildmenu							" vim 自身命令行模式智能补全
 
-
+" 设置文件、buffer编码
 set encoding=utf-8
 set fileencoding=utf-8
 set fileencodings=ucs-bom,utf-8,cp936,gb18030,big5,euc-jp,euc-kr,latin1
 set langmenu=zh_CN.UTF-8
 language message zh_CN.UTF-8
 
-" 自动缩进，每个tab占四个字符，并且4个空格代替tab。
-set smartindent
+set smartindent							" 自动缩进，每个tab占四个字符，并且4个空格代替tab。
 set tabstop=4                           " 设置编辑时制表符占用空格数
 set shiftwidth=4                        " 设置格式化时制表符占用空格数
 set expandtab                           " 将制表符扩展为空格
 set softtabstop=4                       " 将连续的空格视为一个制表符
 set shiftround                          " 缩进取整
 
-" 初始窗口高、宽、位置
-set lines=70
-set columns=210
-winpos 100 100
-" 显示行号
-set number
-" 编辑过程中右下角显示行列信息
-set ruler
-" 高亮显示当前行/列
-set cursorline
-set cursorcolumn
-" 高亮显示搜索结果
-set hlsearch
-" 总显示状态栏                          
-set laststatus=2
-" 启用backspace删除字符功能，并且可以跨行。
-set backspace=indent,eol,start
-" 根据当前输入，增量匹配上下文帮助提示内容。
-set completeopt+=longest
-" 禁止折行
-set nowrap
+set lines=70							" 初始窗口高
+set columns=210							" 初始窗口宽
+winpos 100 100							" 初始窗口位置
+set number								" 显示行号
+set ruler								" 编辑过程中右下角显示行列信息
+set cursorline							" 高亮显示当前行
+set cursorcolumn						" 高亮显示当前列
+set hlsearch							" 高亮显示搜索结果
+set laststatus=2						" 总显示状态栏
+set backspace=indent,eol,start 			" 启用backspace删除字符功能，并且可以跨行。
+set completeopt+=longest				" 根据当前输入，增量匹配上下文帮助提示内容。
+set nowrap								" 禁止折行
+
 
 "
-" plugin settings
+" 插件相关设置
 "
 
+" solarized主题插件配置
 let g:solarized_termtrans=1
 let g:solarized_contrast="normal"
 let g:solarized_visibility="normal"
 let g:solarized_termcolors=256
 
+" molokai主题插件配置
 let g:molokai_original = 1
 
+colorscheme solarized 					" 设置主题
+set background=dark						" 主题色调
 
-colorscheme solarized
-set background=dark
-
-" NERDTree plugin
+" NERDTree插件设置
 nmap <leader>fl :NERDTreeToggle<CR>		" 映射快捷键
 let NERDTreeWinSize=35                  " NERDTree子窗口宽度
 let NERDTreeWinPos="left"               " NERDTree子窗口位置
@@ -118,7 +109,7 @@ au VimEnter * NERDTreeToggle            " vim启动自动打开NERDTree子窗口
 " I(大写):  显示/隐藏 隐藏文件
 " m:        显示操作菜单
 
-" vim-airline plugin
+" vim-airline插件设置
 set laststatus=2                        " 状态栏一直显示
 let g:airline_powerline_fonts = 1
 let g:airline_theme = 'tomorrow'
