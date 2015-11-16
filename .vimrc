@@ -24,6 +24,7 @@ Plugin 'scrooloose/nerdtree'
 Plugin 'bling/vim-airline'	
 Plugin 'tpope/vim-surround'
 Plugin 'fatih/vim-go'
+Plugin 'fholgado/minibufexpl.vim'
 
 
 " 你所有的插件必须加到这一行之前。
@@ -70,6 +71,7 @@ set splitbelow                  		" Split horizontal windows below to the curren
 set encoding=utf-8
 set fileencoding=utf-8
 set fileencodings=ucs-bom,utf-8,cp936,gb18030,big5,euc-jp,euc-kr,latin1
+let &termencoding=&encoding
 set langmenu=zh_CN.UTF-8
 language message zh_CN.UTF-8
 set fileformats=unix,dos,mac    		" 文件格式优先Unix，之后Windows，最后mac
@@ -117,8 +119,8 @@ if has("gui_macvim")
 	let g:molokai_original = 1			" molokai主题插件配置
 
 	let macvim_skip_colorscheme=1
-	colorscheme solarized 				" 设置主题
-"	colorscheme molokai
+"	colorscheme solarized 				" 设置主题
+	colorscheme molokai
 	set background=dark					" 主题色调
 else
 
@@ -152,3 +154,6 @@ au VimEnter * NERDTreeToggle            " vim启动自动打开NERDTree子窗口
 set laststatus=2                        " 状态栏一直显示
 let g:airline_powerline_fonts = 1
 let g:airline_theme = 'tomorrow'
+
+" minibufexpl插件设置
+let g:miniBufExplBRSplit = 0 
