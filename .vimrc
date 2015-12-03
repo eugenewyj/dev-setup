@@ -25,7 +25,7 @@ Plugin 'bling/vim-airline'
 Plugin 'tpope/vim-surround'
 Plugin 'fatih/vim-go'
 Plugin 'fholgado/minibufexpl.vim'
-
+Plugin 'sjl/gundo.vim'
 
 " 你所有的插件必须加到这一行之前。
 call vundle#end()            			" 必须
@@ -127,9 +127,10 @@ else
 endif
 
 " 键映射
-inoremap jk <ESC>
+inoremap jk <ESC>                       
 let mapleader = "\<Space>"
 let g:mapleader = "\<Space>"
+nnoremap <leader>s :mksession<CR>       " 保存会话
 
 
 "
@@ -137,7 +138,7 @@ let g:mapleader = "\<Space>"
 "
 
 " NERDTree插件设置
-nmap <leader>fl :NERDTreeToggle<CR>		" 映射快捷键
+nnoremap <leader>n :NERDTreeToggle<CR>	" 映射快捷键
 let NERDTreeWinSize=35                  " NERDTree子窗口宽度
 let NERDTreeWinPos="left"               " NERDTree子窗口位置
 "let NERDTreeShowHidden=1                " 显示隐藏文件
@@ -156,4 +157,17 @@ let g:airline_powerline_fonts = 1
 let g:airline_theme = 'tomorrow'
 
 " minibufexpl插件设置
-let g:miniBufExplBRSplit = 0 
+nnoremap <leader>m :MBEToggle<CR>       " 映射快捷键
+let g:miniBufExplBRSplit = 0
+" 自定义颜色
+hi MBENormal               guifg=#808080 guibg=fg
+hi MBEChanged              guifg=#CD5907 guibg=fg
+hi MBEVisibleNormal        guifg=#5DC2D6 guibg=fg
+hi MBEVisibleChanged       guifg=#F1266F guibg=fg
+hi MBEVisibleActiveNormal  guifg=#A6DB29 guibg=fg
+hi MBEVisibleActiveChanged guifg=#F1266F guibg=fg
+
+" gundo插件设置
+nnoremap <leader>u :GundoToggle<CR>     " 开关gundo窗口
+
+

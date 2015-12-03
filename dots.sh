@@ -25,10 +25,6 @@ function runDots() {
     echo "------------------------------"
 }
 
-read -p "执行这个脚本可能会覆盖home目录下已经存在的文件，确定要执行么？ (y/n) " -n 1;
-echo "";
-if [[ $REPLY =~ ^[Yy]$ ]]; then
-    runDots $@
-fi;
+runDots $@
 
 unset runDots;
