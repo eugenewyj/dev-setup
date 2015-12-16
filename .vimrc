@@ -21,13 +21,18 @@ Plugin 'altercation/vim-colors-solarized'
 Plugin 'tomasr/molokai'
 Plugin 'chriskempson/vim-tomorrow-theme'
 Plugin 'scrooloose/nerdtree'
-Plugin 'bling/vim-airline'	
+Plugin 'bling/vim-airline'
 Plugin 'tpope/vim-surround'
-Plugin 'fatih/vim-go'
 Plugin 'fholgado/minibufexpl.vim'
 Plugin 'sjl/gundo.vim'
 Plugin 'xolox/vim-misc'
 Plugin 'xolox/vim-session'
+Plugin 'fatih/vim-go'
+Plugin 'scrooloose/syntastic'
+#Plugin 'majutsushi/tagbar'
+#Plugin 'rjohnsondev/vim-compiler-go'
+#Plugin 'dgryski/vim-godef'
+#Plugin 'vim-jp/vim-go-extra'
 
 " 你所有的插件必须加到这一行之前。
 call vundle#end()            			" 必须
@@ -117,7 +122,7 @@ if has("gui_macvim")
 	let g:solarized_contrast="normal"
 	let g:solarized_visibility="normal"
 	let g:solarized_termcolors=256
-	
+
 	let g:molokai_original = 1			" molokai主题插件配置
 
 	let macvim_skip_colorscheme=1
@@ -129,7 +134,7 @@ else
 endif
 
 " 键映射
-inoremap jk <ESC>                       
+inoremap jk <ESC>
 let mapleader = "\<Space>"
 let g:mapleader = "\<Space>"
 nnoremap <leader>s :mksession<CR>       " 保存会话
@@ -167,5 +172,3 @@ let g:miniBufExplBRSplit = 0
 
 " gundo插件设置
 nnoremap <leader>u :GundoToggle<CR>     " 开关gundo窗口
-
-
