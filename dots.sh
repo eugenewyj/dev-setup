@@ -10,6 +10,14 @@ function runDots() {
     # Run sections based on command line arguments
     for ARG in "$@"
     do
+        if [ $ARG == "brew" ] || [ $ARG == "all" ]; then
+            echo ""
+            echo "------------------------------"
+            echo "同步dev-setup仓库中一些常用软件的配置文件到Home目录。"
+            echo "------------------------------"
+            echo ""
+            ./brew.sh
+        fi
         if [ $ARG == "base" ] || [ $ARG == "all" ]; then
             echo ""
             echo "------------------------------"
