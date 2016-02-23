@@ -90,3 +90,6 @@ autoload -U compinit && compinit
 # golang path
 export GOPATH=/Users/eugene/Workspace/Go
 export PATH=$GOPATH/bin:$PATH
+
+# Iterm2 Shell Integration
+source ~/.iterm2_shell_integration.zsh
