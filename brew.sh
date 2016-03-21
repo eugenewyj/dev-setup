@@ -15,6 +15,11 @@ if test ! $(which brew); then
   ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 fi
 
+# Install tmux
+brew install tmux
+brew install reattach-to-user-namespace
+
+
 # Install Cask
 brew install caskroom/cask/brew-cask
 
@@ -30,6 +35,10 @@ brew cask install --appdir="/Applications" google-chrome
 
 # Link cask apps to Alfred
 brew cask alfred link
+
+# Install Macvim
+brew install vim && brew install macvim
+brew link --overwrite macvim
 
 # Remove outdated versions from the cellar.
 brew cleanup

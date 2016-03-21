@@ -13,7 +13,7 @@ function runDots() {
         if [ $ARG == "brew" ] || [ $ARG == "all" ]; then
             echo ""
             echo "------------------------------"
-            echo "同步dev-setup仓库中一些常用软件的配置文件到Home目录。"
+            echo "使用Homebrew安装常用软件。"
             echo "------------------------------"
             echo ""
             ./brew.sh
