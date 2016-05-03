@@ -7,7 +7,8 @@ git pull origin master;
 function doIt() {
 	echo "doIt..."
     rsync --exclude ".git/" --exclude ".DS_Store" --exclude "*.sh"  --exclude "oh-my-zsh"\
-        --exclude "README.md" --exclude "LICENSE" -avh --no-perms . ~;
+        --exclude ".tmux" --exclude "README.md" --exclude "LICENSE" -avh --no-perms . ~;
+    rsync .tmux/.tmux.conf* ~;
     #source ~/.bash_profile;
 }
 
