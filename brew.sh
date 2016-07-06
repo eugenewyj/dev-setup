@@ -39,6 +39,7 @@ brew cask install --appdir="/Applications" alfred
 brew cask install --appdir="~/Applications" iterm2
 # Development tool casks
 brew cask install --appdir="/Applications" sublime-text3
+brew cash install vagrant
 # Misc casks
 brew cask install --appdir="/Applications" google-chrome
 # Link cask apps to Alfred
