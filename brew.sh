@@ -65,5 +65,6 @@ if test ! $(which m); then
 	echo "Install m-cli..."
 	curl -fsSL https://raw.githubusercontent.com/rgcr/m-cli/master/install.sh | sh
 else
+	echo "Update m-cli..."
 	m --update
 fi
