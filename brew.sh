@@ -48,3 +48,7 @@ brew cask alfred link
 # Remove outdated versions from the cellar.
 brew cleanup
 brew cask cleanup
+
+# 安装 m-cli (https://github.com/rgcr/m-cli)
+# 后续m-cli支持brew时会切换到brew
+curl -fsSL https://raw.githubusercontent.com/rgcr/m-cli/master/install.sh | sh
