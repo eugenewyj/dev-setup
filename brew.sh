@@ -26,45 +26,43 @@ echo "Install tmux..."
 brew install tmux
 brew install reattach-to-user-namespace
 # Install Macvim
-echo "Install vim and macvim..."
-brew install vim && brew install macvim
-brew link --overwrite macvim
+brew install vim 
 
 
 # 安装 Cask
-echo "Install cask..."
-brew install caskroom/cask/brew-cask
-# 更新和升级 cask
+#brew tap phinze/cask
+brew tap caskroom/cask
 brew tap caskroom/versions
+brew install brew-cask
+
+# 更新和升级 cask
 brew cask update
 
 # Core casks
-echo "Install alfred..."
 brew cask install --appdir="/Applications" alfred
-echo "Install iterm2..."
 brew cask install --appdir="~/Applications" iterm2
+
 # Development tool casks
-echo "Install sublime-text3..."
-brew cask install --appdir="/Applications" sublime-text3
-echo "Install vagrant..."
-brew cash install vagrant
-# Misc casks
-echo "Install google-chrome..."
+brew cask install --appdir="/Applications" macvim
+brew cask install --appdir="/Applications" sublime-text
+brew cask install --appdir="/Applications" virtualbox
+brew cask install --appdir="/Applications" vagrant
+
+# Google chrome
 brew cask install --appdir="/Applications" google-chrome
+
 # Link cask apps to Alfred
 brew cask alfred link
 
 # Remove outdated versions from the cellar.
-echo "Brew and cask cleanup..."
-brew cleanup
+brew cleanup --force
 brew cask cleanup
+rm -f -r /Library/Caches/Homebrew/*
 
 # 安装 m-cli (https://github.com/rgcr/m-cli)
 # 后续m-cli支持brew时会切换到brew
 if test ! $(which m); then
-	echo "Install m-cli..."
 	curl -fsSL https://raw.githubusercontent.com/rgcr/m-cli/master/install.sh | sh
 else
-	echo "Update m-cli..."
 	m --update
 fi

@@ -1,0 +1,33 @@
+[user]
+	name = Eugene Wang
+	email = fengbaoxp@gmail.com
+[github]
+	user = fengbaoxp
+[push]
+	default = upstream
+[core]
+	autocrlf = input
+	excludesfile = /Users/eugene/.gitignore_global
+[alias]
+	# Shortening aliases
+	co  = checkout       # Checkout a branch
+	cob = checkout -b    # Checkout a new not yet existing branch
+	f   = fetch -p       # Fetch from a repository and prune any remote-tracking references that no longer exist on the remote.
+	c   = commit         # Commit you changes
+	p   = push           # Push you changes to a remote
+	ba  = branch -a      # List both remote-tracking branches and local branches.
+	bd  = branch -d      # Delete a branch only if it has been merged
+	bD  = branch -D      # Force delete a branch
+	dc  = diff --cached  # Display the staged changes
+	st  = status -sb
+
+	# Feature improving aliases
+    st = status -sb
+    a = add -p
+
+    # Complex aliases
+    plog = log --graph --pretty='format:%C(red)%d%C(reset) %C(yellow)%h%C(reset) %ar %C(green)%aN%C(reset) %s'
+    tlog = log --stat --since='1 Day Ago' --graph --pretty=oneline --abbrev-commit --date=relative
+    lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+    rank = shortlog -sn --no-merges
+    bdm = "!git branch --merged | grep -v '*' | xargs -n 1 git branch -d"
