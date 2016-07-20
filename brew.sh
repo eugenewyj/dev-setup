@@ -61,5 +61,9 @@ brew cask cleanup
 
 # 安装 m-cli (https://github.com/rgcr/m-cli)
 # 后续m-cli支持brew时会切换到brew
-echo "Install m-cli..."
-curl -fsSL https://raw.githubusercontent.com/rgcr/m-cli/master/install.sh | sh
+if test ! $(which m); then
+	echo "Install m-cli..."
+	curl -fsSL https://raw.githubusercontent.com/rgcr/m-cli/master/install.sh | sh
+else
+	m --update
+fi
