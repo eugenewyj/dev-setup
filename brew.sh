@@ -15,52 +15,48 @@ if test ! $(which brew); then
   ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 fi
 
-# 更新和升级 homebrew
+#更新和升级 homebrew
 echo "Update and upgrade homebrew..."
 brew tap homebrew/versions
 brew update
 brew upgrade --all
 
-# Install tmux
-echo "Install tmux..."
+#Install 
 brew install tmux
 brew install reattach-to-user-namespace
-# Install Macvim
 brew install vim 
 
 
-# 安装 Cask
+#安装 Cask
 #brew tap phinze/cask
 brew tap caskroom/cask
 brew tap caskroom/versions
 brew install brew-cask
 
-# 更新和升级 cask
+#更新和升级 cask
 brew cask update
 
-# Core casks
+#Core casks
 brew cask install --appdir="/Applications" alfred
-brew cask install --appdir="~/Applications" iterm2
+brew cask install --appdir="/Applications" iterm2
 
-# Development tool casks
+#安装开发工具
 brew cask install --appdir="/Applications" macvim
 brew cask install --appdir="/Applications" sublime-text
 brew cask install --appdir="/Applications" virtualbox
 brew cask install --appdir="/Applications" vagrant
 
-# Google chrome
+#安装图形界面程序
 brew cask install --appdir="/Applications" google-chrome
+brew cask install --appdir="/Applications" cheatsheet
 
-# Link cask apps to Alfred
-brew cask alfred link
-
-# Remove outdated versions from the cellar.
+#删除过期的文件
 brew cleanup --force
 brew cask cleanup
-rm -f -r /Library/Caches/Homebrew/*
+#rm -f -r /Library/Caches/Homebrew/*
 
-# 安装 m-cli (https://github.com/rgcr/m-cli)
-# 后续m-cli支持brew时会切换到brew
+#安装 m-cli (https://github.com/rgcr/m-cli)
+#后续m-cli支持brew时会切换到brew
 if test ! $(which m); then
 	curl -fsSL https://raw.githubusercontent.com/rgcr/m-cli/master/install.sh | sh
 else
