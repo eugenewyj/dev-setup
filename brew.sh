@@ -25,6 +25,7 @@ brew upgrade --all
 brew install tmux
 brew install reattach-to-user-namespace
 brew install vim 
+brew install hub
 
 
 #安装 Cask
