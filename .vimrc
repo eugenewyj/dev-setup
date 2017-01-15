@@ -4,13 +4,36 @@
 " 
 "
 " Sections:
-"   >常量初始化
 "   >基本设置
 "   >插件管理及配置
 "   >主题配置
 
 "=============================================
-" 第三部分：插件管理及配置
+" 第一部分：基本配置
+"=============================================
+" vim 自身命令行模式智能补全
+set wildmenu 
+
+" 设置vim编码。
+set encoding=utf-8
+set fileencoding=utf-8
+set fileencodings=ucs-bom,utf-8,cp936,gb18030,big5,euc-jp,euc-kr,latin1
+
+" 自动缩进，每个tab占四个字符，并且4个空格代替tab。
+set smartindent
+set tabstop=4                   " 设置编辑时制表符占用空格数
+set shiftwidth=4                " 设置格式化时制表符占用空格数
+set expandtab                   " 将制表符扩展为空格
+set softtabstop=4               " 将连续的空格视为一个制表符
+
+" 自定义快捷键
+let mapleader=";"               " 定义快捷键的前缀，即<Leader>
+vnoremap <leader>y "+y          " 设置系统剪贴本复制快捷键
+nmap <leader>p "+p              " 设置系统剪贴板粘贴快捷键
+
+
+"=============================================
+" 第二部分：插件管理及配置
 "=============================================
 "----------Vundle插件及设置----------
 set rtp+=~/dev-setup/vim/bundle/vundle/
@@ -36,7 +59,7 @@ Bundle 'scrooloose/nerdtree'
 " fl 速记：file list
 nmap <leader>fl :NERDTreeToggle<CR>
 " 设置NERDTree子窗口宽度
-let NERDTreeWinSize=30
+let NERDTreeWinSize=40
 " 设置NERDTree子窗口位置
 let NERDTreeWinPos="left"
 " 显示隐藏文件
@@ -52,3 +75,17 @@ au VimEnter * NERDTreeToggle
 " r:刷新工程目录文件列表
 " I(大写):显示/隐藏 隐藏文件
 " m:出现创建/删除/剪切/拷贝操作列表
+
+"----------Session管理插件----------
+Bundle 'xolox/vim-misc'
+Bundle 'xolox/vim-session'
+" home: https://github.com/xolox/vim-session
+" 关闭自动保存session,启动自动恢复session
+let g:session_autoload="yes"
+let g:session_autosave="yes"
+let g:session_autosave_to="default"
+
+"===================================================
+" 第三部分：主题配置
+"===================================================
+set guifont=Menlo:h14

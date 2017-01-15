@@ -8,7 +8,7 @@ function doIt() {
 	echo "doIt..."
     rsync --exclude ".git/" --exclude ".gitignore" --exclude ".gitmodules"\
         --exclude ".DS_Store" --exclude "*.sh"  --exclude "oh-my-zsh"\
-        --exclude ".tmux" --exclude "README.md" --exclude "LICENSE" -avh --no-perms . ~;
+        --exclude "README.md" --exclude "LICENSE" -avh --no-perms . ~;
     #source ~/.bash_profile;
 }
 
