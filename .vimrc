@@ -62,8 +62,8 @@ nmap <leader>fl :NERDTreeToggle<CR>
 let NERDTreeWinSize=40
 " 设置NERDTree子窗口位置
 let NERDTreeWinPos="left"
-" 显示隐藏文件
-let NERDTreeShowHidden=1
+" 不显示隐藏文件
+let NERDTreeShowHidden=0
 " NERDTree子窗口不显示荣誉帮助信息
 let NERDTreeMinimalUI=1
 " 删除文件时自动删除文件对应 buffer
