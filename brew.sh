@@ -22,8 +22,8 @@ brew update
 brew upgrade --all
 
 #Install 
-brew install tmux
-brew install reattach-to-user-namespace
+#brew install tmux
+#brew install reattach-to-user-namespace
 brew install vim 
 brew install hub
 
@@ -32,10 +32,10 @@ brew install hub
 #brew tap phinze/cask
 brew tap caskroom/cask
 brew tap caskroom/versions
-brew install brew-cask
+brew install brew-cask-completion
 
 #更新和升级 cask
-brew cask update
+brew update
 
 #Core casks
 brew cask install --appdir="/Applications" alfred
