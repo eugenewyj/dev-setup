@@ -49,7 +49,7 @@ ZSH_THEME="robbyrussell"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(brew brew-cask docker docker-compose git golang gradle mvn osx sbt scala tmux z vagrant)
+plugins=(brew brew-cask docker docker-compose git golang gradle mvn osx sbt scala z vagrant)
 
 # User configuration
 export PATH=/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$PATH
