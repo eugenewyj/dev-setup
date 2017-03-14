@@ -69,21 +69,12 @@ let NERDTreeMinimalUI=1
 " 删除文件时自动删除文件对应 buffer
 let NERDTreeAutoDeleteBuffer=1
 " 启动Vim时自动打开NERDTree子窗口
-" au VimEnter * NERDTreeToggle
+au VimEnter * NERDTreeToggle ~/Workspace/
 " 使用帮助
 " 回车或o:打开选中文件
 " r:刷新工程目录文件列表
 " I(大写):显示/隐藏 隐藏文件
 " m:出现创建/删除/剪切/拷贝操作列表
-
-"----------Session管理插件----------
-Bundle 'xolox/vim-misc'
-Bundle 'xolox/vim-session'
-" home: https://github.com/xolox/vim-session
-" 关闭自动保存session,启动自动恢复session
-let g:session_autoload="yes"
-let g:session_autosave="yes"
-let g:session_autosave_to="default"
 
 "===================================================
 " 第三部分：主题配置
