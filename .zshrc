@@ -93,3 +93,7 @@ export PATH=$GOPATH/bin:$PATH
 
 # Iterm2 Shell Integration
 source ~/.iterm2_shell_integration.zsh
+
+# zsh-completions path 
+fpath=(/usr/local/share/zsh-completions $fpath)
+
