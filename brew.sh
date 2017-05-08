@@ -17,16 +17,16 @@ fi
 
 #更新和升级 homebrew
 echo "Update and upgrade homebrew..."
-brew tap homebrew/versions
+#brew tap homebrew/versions
 brew update
-brew upgrade --all
+brew upgrade
 
 #Install 
 #brew install tmux
 #brew install reattach-to-user-namespace
 brew install vim 
 brew install hub
-
+brew install thefuck
 
 #安装 Cask
 #brew tap phinze/cask
@@ -63,3 +63,4 @@ if test ! $(which m); then
 else
 	m --update
 fi
+

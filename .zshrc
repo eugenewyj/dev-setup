@@ -97,3 +97,5 @@ source ~/.iterm2_shell_integration.zsh
 # zsh-completions path 
 fpath=(/usr/local/share/zsh-completions $fpath)
 
+# 添加thefuck别名
+eval "$(thefuck --alias)"
