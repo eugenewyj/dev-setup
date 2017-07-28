@@ -51,6 +51,10 @@ brew cask install --appdir="/Applications" vagrant
 brew cask install --appdir="/Applications" google-chrome
 brew cask install --appdir="/Applications" cheatsheet
 
+#安装命令行音乐播放器
+#brew tap clangen/musikcube
+#brew install musikcube
+
 #删除过期的文件
 brew cleanup --force
 brew cask cleanup
