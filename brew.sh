@@ -60,7 +60,7 @@ brew cask install --appdir="/Applications" sizeup
 #更新过期的cask(https://github.com/buo/homebrew-cask-upgrade)
 brew tap buo/cask-upgrade
 brew update
-brew cu
+brew cu -y
 
 #删除过期的文件
 brew cleanup --force
