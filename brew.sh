@@ -24,15 +24,15 @@ brew upgrade
 #Install 
 #brew install tmux
 #brew install reattach-to-user-namespace
-brew install vim 
+#brew install vim 
 brew install hub
 brew install thefuck
 
-#安装 Cask
-#brew tap phinze/cask
+#安装 Cask(https://github.com/caskroom/homebrew-cask)
 brew tap caskroom/cask
 brew tap caskroom/versions
-brew install brew-cask-completion
+# brew install brew-cask-completion #支持bash和fish
+brew install zsh-completions
 
 #更新和升级 cask
 brew update
@@ -42,18 +42,25 @@ brew cask install --appdir="/Applications" alfred
 brew cask install --appdir="/Applications" iterm2
 
 #安装开发工具
-brew cask install --appdir="/Applications" macvim
+#brew cask install --appdir="/Applications" macvim
 brew cask install --appdir="/Applications" sublime-text
 brew cask install --appdir="/Applications" virtualbox
 brew cask install --appdir="/Applications" vagrant
+brew cask install --appdir="/Applications" visual-studio-code
 
-#安装图形界面程序
+#安装其他常用工具
 brew cask install --appdir="/Applications" google-chrome
 brew cask install --appdir="/Applications" cheatsheet
+brew cask install --appdir="/Applications" sizeup
 
 #安装命令行音乐播放器
 #brew tap clangen/musikcube
 #brew install musikcube
+
+#更新过期的cask(https://github.com/buo/homebrew-cask-upgrade)
+brew tap buo/cask-upgrade
+brew update
+brew cu
 
 #删除过期的文件
 brew cleanup --force
@@ -62,9 +69,10 @@ brew cask cleanup
 
 #安装 m-cli (https://github.com/rgcr/m-cli)
 #后续m-cli支持brew时会切换到brew
-if test ! $(which m); then
-	curl -fsSL https://raw.githubusercontent.com/rgcr/m-cli/master/install.sh | sh
-else
-	m --update
-fi
+#暂时没有用到m-cli，所以注释掉。
+# if test ! $(which m); then
+# 	curl -fsSL https://raw.githubusercontent.com/rgcr/m-cli/master/install.sh | sh
+# else
+# 	m --update
+# fi
 
