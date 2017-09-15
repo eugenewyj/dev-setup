@@ -27,12 +27,12 @@ brew upgrade
 #brew install vim 
 brew install hub
 brew install thefuck
+# brew install brew-cask-completion #支持bash和fish
+brew install zsh-completions
 
 #安装 Cask(https://github.com/caskroom/homebrew-cask)
 brew tap caskroom/cask
 brew tap caskroom/versions
-# brew install brew-cask-completion #支持bash和fish
-brew install zsh-completions
 
 #更新和升级 cask
 brew update
@@ -52,6 +52,7 @@ brew cask install --appdir="/Applications" visual-studio-code
 brew cask install --appdir="/Applications" google-chrome
 brew cask install --appdir="/Applications" cheatsheet
 brew cask install --appdir="/Applications" sizeup
+brew cask install --appdir="/Applications" xmind
 
 #安装命令行音乐播放器
 #brew tap clangen/musikcube
