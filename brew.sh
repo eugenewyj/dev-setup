@@ -53,6 +53,18 @@ brew cask install --appdir="/Applications" google-chrome
 brew cask install --appdir="/Applications" cheatsheet
 brew cask install --appdir="/Applications" sizeup
 brew cask install --appdir="/Applications" xmind
+brew cask install --appdir="/Applications" the-unarchiver
+brew cask install --appdir="/Applications" appcleaner
+brew cask install --appdir="/Applications" vlc
+brew cask install --appdir="/Applications" omnidisksweeper
+brew cask install --appdir="/Applications" cakebrew
+brew cask install --appdir="/Applications" macpass
+brew cask install --appdir="/Applications" dictunifier
+brew cask install --appdir="/Applications" calibre
+
+## 安装shadowsocksx(配置参考备忘)
+brew cask install --appdir="/Applications" shadowsocksx
+
 
 #安装命令行音乐播放器
 #brew tap clangen/musikcube
@@ -64,8 +76,8 @@ brew update
 brew cu -y
 
 #删除过期的文件
-brew cleanup --force
-brew cask cleanup
+#brew cleanup --force
+#brew cask cleanup
 #rm -f -r /Library/Caches/Homebrew/*
 
 #安装 m-cli (https://github.com/rgcr/m-cli)
