@@ -61,6 +61,7 @@ brew cask install --appdir="/Applications" cakebrew
 brew cask install --appdir="/Applications" macpass
 brew cask install --appdir="/Applications" dictunifier
 brew cask install --appdir="/Applications" calibre
+brew cask install --appdir="/Applications" kindle
 
 ## 安装shadowsocksx(配置参考备忘)
 brew cask install --appdir="/Applications" shadowsocksx
