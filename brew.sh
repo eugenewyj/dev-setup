@@ -42,6 +42,7 @@ brew cask install --appdir="/Applications" alfred
 brew cask install --appdir="/Applications" iterm2
 
 #安装开发工具
+brew cask install java
 #brew cask install --appdir="/Applications" macvim
 brew cask install --appdir="/Applications" sublime-text
 brew cask install --appdir="/Applications" virtualbox
