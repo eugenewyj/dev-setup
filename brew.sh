@@ -19,16 +19,24 @@ fi
 echo "Update and upgrade homebrew..."
 #brew tap homebrew/versions
 brew update
-brew upgrade
 
-#Install 
-#brew install tmux
-#brew install reattach-to-user-namespace
-#brew install vim 
-brew install hub
-brew install thefuck
+#Core Formule 
+brew install zsh
 # brew install brew-cask-completion #支持bash和fish
 brew install zsh-completions
+#brew install reattach-to-user-namespace
+brew install hub
+brew install thefuck
+
+#安装开发工具
+brew install maven
+brew install gradle
+brew install tomcat
+brew install kubectl
+
+#更新过期的Formule
+brew upgrade
+
 
 #安装 Cask(https://github.com/caskroom/homebrew-cask)
 brew tap caskroom/cask
@@ -48,6 +56,7 @@ brew cask install --appdir="/Applications" sublime-text
 brew cask install --appdir="/Applications" virtualbox
 brew cask install --appdir="/Applications" vagrant
 brew cask install --appdir="/Applications" visual-studio-code
+brew cask install --appdir="/Applications" minikube
 
 #安装其他常用工具
 brew cask install --appdir="/Applications" google-chrome
@@ -66,7 +75,6 @@ brew cask install --appdir="/Applications" kindle
 
 ## 安装shadowsocksx(配置参考备忘)
 brew cask install --appdir="/Applications" shadowsocksx
-
 
 #安装命令行音乐播放器
 #brew tap clangen/musikcube
