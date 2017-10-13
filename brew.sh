@@ -41,6 +41,7 @@ brew upgrade
 #安装 Cask(https://github.com/caskroom/homebrew-cask)
 brew tap caskroom/cask
 brew tap caskroom/versions
+brew tap caskroom/fonts
 
 #更新和升级 cask
 brew update
@@ -48,6 +49,9 @@ brew update
 #Core casks
 brew cask install --appdir="/Applications" alfred
 brew cask install --appdir="/Applications" iterm2
+
+#安装字体
+brew cask install font-source-code-pro
 
 #安装开发工具
 brew cask install java
