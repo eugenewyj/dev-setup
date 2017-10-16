@@ -28,11 +28,19 @@ brew install zsh-completions
 brew install hub
 brew install thefuck
 
+# 安装fzf (https://github.com/junegunn/fzf)
+brew install fzf
+## To install useful key bindings and fuzzy completion:
+$(brew --prefix)/opt/fzf/install
+
+
 #安装开发工具
 brew install maven
 brew install gradle
 brew install tomcat
 brew install kubectl
+#brew install node
+#brew install yarn
 
 #更新过期的Formule
 brew upgrade
@@ -91,9 +99,9 @@ brew update
 brew cu -y
 
 #删除过期的文件
-#brew cleanup --force
-#brew cask cleanup
-#rm -f -r /Library/Caches/Homebrew/*
+brew cleanup --force
+brew cask cleanup
+rm -f -r /Library/Caches/Homebrew/*
 
 #安装 m-cli (https://github.com/rgcr/m-cli)
 #后续m-cli支持brew时会切换到brew
