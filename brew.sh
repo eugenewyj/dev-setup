@@ -41,7 +41,7 @@ brew install tomcat
 brew install kubectl
 #brew install node
 #brew install yarn
-
+brew install protobuf
 #更新过期的Formule
 brew upgrade
 
@@ -60,6 +60,7 @@ brew cask install --appdir="/Applications" iterm2
 
 #安装字体
 brew cask install font-source-code-pro
+brew cask install font-fira-code
 
 #安装开发工具
 brew cask install java
