@@ -98,3 +98,6 @@ fpath=(/usr/local/share/zsh-completions $fpath)
 
 # 添加thefuck别名
 eval "$(thefuck --alias)"
+
+# 添加python3路径
+export PATH=$(python3 -m site --user-base)/bin:$PATH
