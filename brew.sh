@@ -66,11 +66,12 @@ brew cask install font-fira-code
 brew cask install java
 #brew cask install --appdir="/Applications" macvim
 brew cask install --appdir="/Applications" sublime-text
+brew cask install --appdir="/Applications" visual-studio-code
+brew cask install --appdir="/Applications" sequel-pro
 brew cask install --appdir="/Applications" virtualbox
 brew cask install --appdir="/Applications" vagrant
-brew cask install --appdir="/Applications" visual-studio-code
+brew cask install --appdir="/Applications" docker
 brew cask install --appdir="/Applications" minikube
-brew cask install --appdir="/Applications" sequel-pro
 
 #安装其他常用工具
 brew cask install --appdir="/Applications" google-chrome
