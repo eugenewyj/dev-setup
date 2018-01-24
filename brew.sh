@@ -29,9 +29,9 @@ brew install hub
 brew install thefuck
 
 # 安装fzf (https://github.com/junegunn/fzf)
-brew install fzf
+#brew install fzf
 ## To install useful key bindings and fuzzy completion:
-$(brew --prefix)/opt/fzf/install
+#$(brew --prefix)/opt/fzf/install
 
 
 #安装开发工具
@@ -91,7 +91,7 @@ brew cask install --appdir="/Applications" macdown
 brew cask install --appdir="/Applications" sketch
 
 ## 安装shadowsocksx(配置参考备忘)
-brew cask install --appdir="/Applications" shadowsocksx
+brew cask install --appdir="/Applications" shadowsocksx-ng
 
 #安装命令行音乐播放器
 #brew tap clangen/musikcube
@@ -103,9 +103,9 @@ brew update
 brew cu -y
 
 #删除过期的文件
-brew cleanup --force
-brew cask cleanup
-rm -f -r /Library/Caches/Homebrew/*
+#brew cleanup --force
+#brew cask cleanup
+#rm -f -r /Library/Caches/Homebrew/*
 
 #安装 m-cli (https://github.com/rgcr/m-cli)
 #后续m-cli支持brew时会切换到brew
