@@ -42,6 +42,11 @@ brew install kubectl
 #brew install node
 #brew install yarn
 brew install protobuf
+# 安装xhyve驱动并处理权限
+brew install docker-machine-driver-xhyve
+sudo chown root:wheel $(brew --prefix)/opt/docker-machine-driver-xhyve/bin/docker-machine-driver-xhyve
+sudo chmod u+s $(brew --prefix)/opt/docker-machine-driver-xhyve/bin/docker-machine-driver-xhyve
+
 #更新过期的Formule
 brew upgrade
 
@@ -103,9 +108,9 @@ brew update
 brew cu -y
 
 #删除过期的文件
-#brew cleanup --force
-#brew cask cleanup
-#rm -f -r /Library/Caches/Homebrew/*
+brew cleanup --force
+brew cask cleanup
+rm -f -r /Library/Caches/Homebrew/*
 
 #安装 m-cli (https://github.com/rgcr/m-cli)
 #后续m-cli支持brew时会切换到brew
