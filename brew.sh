@@ -42,10 +42,6 @@ brew install kubectl
 #brew install node
 #brew install yarn
 brew install protobuf
-# 安装xhyve驱动并处理权限
-brew install docker-machine-driver-xhyve
-sudo chown root:wheel $(brew --prefix)/opt/docker-machine-driver-xhyve/bin/docker-machine-driver-xhyve
-sudo chmod u+s $(brew --prefix)/opt/docker-machine-driver-xhyve/bin/docker-machine-driver-xhyve
 
 #更新过期的Formule
 brew upgrade
