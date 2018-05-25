@@ -73,6 +73,7 @@ brew cask install --appdir="/Applications" virtualbox
 brew cask install --appdir="/Applications" vagrant
 brew cask install --appdir="/Applications" docker
 brew cask install --appdir="/Applications" minikube
+brew cask install --appdir="/Applications" postman
 
 #安装其他常用工具
 brew cask install --appdir="/Applications" google-chrome
