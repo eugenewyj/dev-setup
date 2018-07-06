@@ -69,7 +69,7 @@ brew cask install java
 #brew cask install --appdir="/Applications" macvim
 brew cask install --appdir="/Applications" sublime-text
 brew cask install --appdir="/Applications" visual-studio-code
-brew cask install --appdir="/Applications" sequel-pro
+#brew cask install --appdir="/Applications" sequel-pro
 brew cask install --appdir="/Applications" virtualbox
 brew cask install --appdir="/Applications" vagrant
 brew cask install --appdir="/Applications" docker
@@ -103,7 +103,7 @@ brew cask install --appdir="/Applications" shadowsocksx-ng
 #更新过期的cask(https://github.com/buo/homebrew-cask-upgrade)
 brew tap buo/cask-upgrade
 brew update
-brew cu -y
+brew cu -a -y
 
 #删除过期的文件
 brew cleanup --force
