@@ -67,7 +67,8 @@ brew cask install font-fira-code
 #安装开发工具
 brew cask install java
 #brew cask install --appdir="/Applications" macvim
-brew cask install --appdir="/Applications" sublime-text
+# 删除sublime-text,改用vs code。
+#brew cask install --appdir="/Applications" sublime-text
 brew cask install --appdir="/Applications" visual-studio-code
 #brew cask install --appdir="/Applications" sequel-pro
 brew cask install --appdir="/Applications" virtualbox
