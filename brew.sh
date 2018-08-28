@@ -43,6 +43,7 @@ brew install kubectl
 #brew install yarn
 brew install protobuf
 brew install pipenv
+brew install redis
 
 #更新过期的Formule
 brew upgrade
