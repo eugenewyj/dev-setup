@@ -111,8 +111,8 @@ brew update
 brew cu -a -y
 
 #删除过期的文件
-brew cleanup --force
-brew cask cleanup
+brew cleanup
+#brew cask cleanup  #已经由brew cleanup替代
 rm -f -r /Library/Caches/Homebrew/*
 
 #安装 m-cli (https://github.com/rgcr/m-cli)
