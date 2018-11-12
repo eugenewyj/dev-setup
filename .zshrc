@@ -101,3 +101,7 @@ eval "$(thefuck --alias)"
 
 # 添加python3路径
 export PATH=$(python3 -m site --user-base)/bin:$PATH
+
+# 解决idea pipenv 报错：ValueError: unknown locale: UTF-8
+export LC_ALL=en_US.UTF-8
+export LANG=en_US.UTF-8
