@@ -44,6 +44,7 @@ brew install kubectl
 brew install protobuf
 brew install pipenv
 brew install redis
+brew install fx         # https://github.com/antonmedv/fx
 
 #更新过期的Formule
 brew upgrade
