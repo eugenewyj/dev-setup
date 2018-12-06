@@ -45,6 +45,8 @@ brew install protobuf
 brew install pipenv
 brew install redis
 brew install fx         # https://github.com/antonmedv/fx
+brew install go
+brew install httpie     # https://github.com/jakubroztocil/httpie
 
 #更新过期的Formule
 brew upgrade
