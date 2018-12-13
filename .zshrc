@@ -105,3 +105,9 @@ export PATH=$(python3 -m site --user-base)/bin:$PATH
 # 解决idea pipenv 报错：ValueError: unknown locale: UTF-8
 export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
+
+# 添加 flutter path
+export FLUTTER_HOME=/usr/local/Cellar/flutter
+export PATH=$FLUTTER_HOME/bin:$PATH
+export PUB_HOSTED_URL=https://pub.flutter-io.cn
+export FLUTTER_STORAGE_BASE_URL=https://storage.flutter-io.cn
