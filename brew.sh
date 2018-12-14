@@ -96,7 +96,8 @@ brew cask install --appdir="/Applications" omnidisksweeper
 brew cask install --appdir="/Applications" cakebrew
 brew cask install --appdir="/Applications" macpass
 brew cask install --appdir="/Applications" dictunifier
-brew cask install --appdir="/Applications" calibre
+# 删除calibre，因为有ibook和kindle很少用calibre。
+#brew cask install --appdir="/Applications" calibre
 brew cask install --appdir="/Applications" kindle
 brew cask install --appdir="/Applications" macdown
 brew cask install --appdir="/Applications" sketch
