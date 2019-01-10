@@ -39,14 +39,17 @@ brew install maven
 brew install gradle
 brew install tomcat
 brew install kubectl
-#brew install node
-#brew install yarn
+brew install node
 brew install protobuf
 brew install pipenv
 brew install redis
 brew install fx         # https://github.com/antonmedv/fx
 brew install go
 brew install httpie     # https://github.com/jakubroztocil/httpie
+
+#按照git辅助工具
+npm install -g commitizen
+npm install -g cz-customizable
 
 #更新过期的Formule
 brew upgrade
