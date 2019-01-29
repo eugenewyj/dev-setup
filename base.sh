@@ -9,7 +9,7 @@ function doIt() {
     rsync --exclude ".git/" --exclude ".gitignore" --exclude ".gitmodules"\
         --exclude ".DS_Store" --exclude "*.sh"  --exclude "oh-my-zsh"\
         --exclude ".vimrc" --exclude "vim" --exclude "README.md" --exclude "LICENSE"\
-        --exclude "eugene-data" -avh --no-perms . ~;
+        --exclude "eugene-data" --exclude ".cz-config.js" -avh --no-perms . ~;
     #source ~/.bash_profile;
 }
 
