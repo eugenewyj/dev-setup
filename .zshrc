@@ -111,3 +111,6 @@ export FLUTTER_HOME=/usr/local/Cellar/flutter
 export PATH=$FLUTTER_HOME/bin:$PATH
 export PUB_HOSTED_URL=https://pub.flutter-io.cn
 export FLUTTER_STORAGE_BASE_URL=https://storage.flutter-io.cn
+
+# 添加 anaconda path
+export PATH=/Users/eugene/anaconda3/bin:$PATH
