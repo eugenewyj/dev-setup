@@ -54,11 +54,10 @@ npm install -g cz-customizable
 #更新过期的Formule
 brew upgrade
 
-
 #安装 Cask(https://github.com/caskroom/homebrew-cask)
 brew tap caskroom/cask
 brew tap caskroom/versions
-brew tap caskroom/fonts
+
 
 #更新和升级 cask
 brew update
