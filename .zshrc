@@ -114,3 +114,6 @@ export FLUTTER_STORAGE_BASE_URL=https://storage.flutter-io.cn
 
 # 添加 anaconda path
 export PATH=/Users/eugene/anaconda3/bin:$PATH
+
+alias c='~/token/token.sh'
+alias cn='~/token/token.sh --next'
