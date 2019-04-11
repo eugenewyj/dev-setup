@@ -88,6 +88,7 @@ autoload -U compinit && compinit
 
 # golang path
 export GOPATH=/Users/eugene/Workspace/Go
+export GO111MODULE=on
 export PATH=$GOPATH/bin:$PATH
 
 # Iterm2 Shell Integration
