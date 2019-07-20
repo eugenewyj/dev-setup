@@ -89,6 +89,7 @@ autoload -U compinit && compinit
 # golang path
 export GOPATH=/Users/eugene/Workspace/Go
 export GO111MODULE=on
+export GOPROXY=https://goproxy.cn
 export PATH=$GOPATH/bin:$PATH
 
 # Iterm2 Shell Integration
@@ -116,5 +117,11 @@ export FLUTTER_STORAGE_BASE_URL=https://storage.flutter-io.cn
 # 添加 anaconda path
 export PATH=/Users/eugene/anaconda3/bin:$PATH
 
+# 添加 rustup
+export RUSTUP_DIST_SERVER=https://mirrors.ustc.edu.cn/rust-static
+export RUSTUP_UPDATE_ROOT=https://mirrors.ustc.edu.cn/rust-static/rustup
+export PATH="$HOME/.cargo/bin:$PATH"
+
+# 公司token
 alias c='~/token/token.sh'
 alias cn='~/token/token.sh --next'
