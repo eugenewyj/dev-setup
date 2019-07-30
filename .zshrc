@@ -1,5 +1,5 @@
 # Path to your oh-my-zsh installation.
-export ZSH=/Users/eugene/dev-setup/oh-my-zsh
+export ZSH=/Users/eugene/02Eugene/01Projects/dev-setup/oh-my-zsh
 
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
@@ -87,7 +87,7 @@ alias subl="/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl"
 autoload -U compinit && compinit
 
 # golang path
-export GOPATH=/Users/eugene/Workspace/Go
+export GOPATH=/Users/eugene/20Go
 export GO111MODULE=on
 export GOPROXY=https://goproxy.cn
 export PATH=$GOPATH/bin:$PATH
@@ -114,14 +114,11 @@ export PATH=$FLUTTER_HOME/bin:$PATH
 export PUB_HOSTED_URL=https://pub.flutter-io.cn
 export FLUTTER_STORAGE_BASE_URL=https://storage.flutter-io.cn
 
-# 添加 anaconda path
-export PATH=/Users/eugene/anaconda3/bin:$PATH
-
 # 添加 rustup
 export RUSTUP_DIST_SERVER=https://mirrors.ustc.edu.cn/rust-static
 export RUSTUP_UPDATE_ROOT=https://mirrors.ustc.edu.cn/rust-static/rustup
 export PATH="$HOME/.cargo/bin:$PATH"
 
 # 公司token
-alias c='~/token/token.sh'
-alias cn='~/token/token.sh --next'
+alias c='~/00Qunar/00Stoken/token.sh'
+alias cn='~/00Qunar/00Stoken/token.sh --next'
