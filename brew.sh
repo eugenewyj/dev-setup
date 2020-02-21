@@ -46,6 +46,9 @@ brew install redis
 brew install fx         # https://github.com/antonmedv/fx
 brew install go
 brew install httpie     # https://github.com/jakubroztocil/httpie
+brew install graphviz
+brew install jq
+brew install tree
 
 #按照git辅助工具
 npm install -g commitizen
@@ -90,7 +93,7 @@ brew install lazygit
 brew cask install --appdir="/Applications" google-chrome
 brew cask install --appdir="/Applications" cheatsheet
 brew cask install --appdir="/Applications" sizeup
-brew cask install --appdir="/Applications" xmind
+#brew cask install --appdir="/Applications" xmind
 brew cask install --appdir="/Applications" the-unarchiver
 brew cask install --appdir="/Applications" appcleaner
 brew cask install --appdir="/Applications" vlc
@@ -102,10 +105,17 @@ brew cask install --appdir="/Applications" dictunifier
 #brew cask install --appdir="/Applications" calibre
 brew cask install --appdir="/Applications" kindle
 brew cask install --appdir="/Applications" macdown
-brew cask install --appdir="/Applications" sketch
+#brew cask install --appdir="/Applications" sketch
+brew cask install --appdir="/Applications" wireshark
 
 ## 安装shadowsocksx(配置参考备忘)
 brew cask install --appdir="/Applications" shadowsocksx-ng
+
+brew cask install --appdir="/Applications" go2shell
+brew cask install --appdir="/Applications" drawio
+
+## redis 桌面管理器
+#brew cask install --appdir="/Applications" rdm
 
 #安装命令行音乐播放器
 #brew tap clangen/musikcube
