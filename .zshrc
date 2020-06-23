@@ -49,7 +49,7 @@ ZSH_THEME="robbyrussell"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(brew docker docker-compose git golang gradle mvn osx sbt scala z vagrant zsh-completions kubectl)
+plugins=(brew docker docker-compose git golang gradle mvn osx sbt z vagrant zsh-completions vscode spring rust rustup httpie)
 
 # User configuration
 export PATH=/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$PATH
@@ -120,6 +120,6 @@ export RUSTUP_UPDATE_ROOT=https://mirrors.ustc.edu.cn/rust-static/rustup
 export RUST_SRC_PATH="$(rustc --print sysroot)/lib/rustlib/src/rust/src"
 export PATH="$HOME/.cargo/bin:$PATH"
 
-# 公司token
-alias c='~/00Qunar/00Stoken/token.sh'
-alias cn='~/00Qunar/00Stoken/token.sh --next'
+# brew 配置
+export HOMEBREW_BOTTLE_DOMAIN=https://mirrors.ustc.edu.cn/homebrew-bottles/
+export HOMEBREW_NO_AUTO_UPDATE=1
