@@ -8,6 +8,7 @@
 [core]
 	autocrlf = input
 	excludesfile = /Users/eugene/.gitignore_global
+	editor = code --wait
 [alias]
 	# Shortening aliases
 	co  = checkout       # Checkout a branch
