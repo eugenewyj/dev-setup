@@ -20,13 +20,14 @@ echo "Update and upgrade homebrew..."
 #brew tap homebrew/versions
 brew update
 
-#Core Formule 
+#Core Formule
 brew install zsh
 # brew install brew-cask-completion #支持bash和fish
 brew install zsh-completions
 #brew install reattach-to-user-namespace
 brew install hub
 brew install thefuck
+brew install autojump
 
 # 安装fzf (https://github.com/junegunn/fzf)
 #brew install fzf
@@ -139,4 +140,3 @@ rm -f -r /Library/Caches/Homebrew/*
 # else
 # 	m --update
 # fi
-
