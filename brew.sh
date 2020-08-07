@@ -32,8 +32,8 @@ else
 fi
 
 #brew install reattach-to-user-namespace
-brew install hub
-brew install thefuck
+#brew install hub
+#brew install thefuck
 if [ `command -v j` ]; then
   echo "升级autojump..."
   brew upgrade autojump
@@ -49,20 +49,95 @@ fi
 
 
 #安装开发工具
-brew install maven
-brew install gradle
-brew install tomcat
-brew install kubectl
-brew install node
-brew install protobuf
-brew install pipenv
-brew install redis
-brew install fx         # https://github.com/antonmedv/fx
-brew install go
-brew install httpie     # https://github.com/jakubroztocil/httpie
-brew install graphviz
-brew install jq
-brew install tree
+if [ `command -v mvn` ]; then
+  echo "升级 maven..."
+  brew upgrade maven
+else
+  echo "安装 maven..."
+  brew install maven
+fi
+
+if [ `command -v gradle` ]; then
+  echo "升级 gradle..."
+  brew upgrade gradle
+else
+  echo "安装 gradle..."
+  brew install gradle
+fi
+
+if [ `command -v kubectl` ]; then
+  echo "升级 kubectl..."
+  brew upgrade kubectl
+else
+  echo "安装 kubectl..."
+  brew install kubectl
+fi
+
+f [ `command -v node` ]; then
+  echo "升级 node..."
+  brew upgrade node
+else
+  echo "安装 node..."
+  brew install node
+fi
+
+if [ `command -v redis-cli` ]; then
+  echo "升级 redis..."
+  brew upgrade redis
+else
+  echo "安装 redis..."
+  brew install redis
+fi
+
+if [ `command -v go` ]; then
+  echo "升级 go..."
+  brew upgrade go
+else
+  echo "安装 go..."
+  brew install go
+fi
+
+# https://github.com/jakubroztocil/httpie
+if [ `command -v http` ]; then
+  echo "升级 httpie..."
+  brew upgrade httpie
+else
+  echo "安装 httpie..."
+  brew install httpie
+fi
+
+if [ `command -v dot` ]; then
+  echo "升级 graphviz..."
+  brew upgrade graphviz
+else
+  echo "安装 graphviz..."
+  brew install graphviz
+fi
+
+if [ `command -v jq` ]; then
+  echo "升级 jq..."
+  brew upgrade jq
+else
+  echo "安装 jq..."
+  brew install jq
+fi
+# https://github.com/antonmedv/fx
+if [ `command -v fx` ]; then
+  echo "升级 fx..."
+  brew upgrade fx
+else
+  echo "安装 fx..."
+  brew install fx
+fi
+
+if [ `command -v tree` ]; then
+  echo "升级 tree..."
+  brew upgrade tree
+else
+  echo "安装 tree..."
+  brew install tree
+fi
+
 # docker image 分析工具
 if [ `command -v dive` ]; then
   echo "升级dive..."
