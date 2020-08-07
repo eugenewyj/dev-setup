@@ -21,13 +21,26 @@ echo "Update and upgrade homebrew..."
 brew update
 
 #Core Formule
-brew install zsh
-# brew install brew-cask-completion #支持bash和fish
-brew install zsh-completions
+if [ `command -v zsh` ]; then
+  echo "升级zsh,zsh-completions..."
+  brew upgrade zsh
+  brew upgrade zsh-completions
+else
+  echo "安装zsh,zsh-completions..."
+  brew install zsh
+  brew upgrade zsh-completions
+fi
+
 #brew install reattach-to-user-namespace
 brew install hub
 brew install thefuck
-brew install autojump
+if [ `command -v j` ]; then
+  echo "升级autojump..."
+  brew upgrade autojump
+else
+  echo "安装autojump..."
+  brew install autojump
+fi
 
 # 安装fzf (https://github.com/junegunn/fzf)
 #brew install fzf
@@ -50,16 +63,22 @@ brew install httpie     # https://github.com/jakubroztocil/httpie
 brew install graphviz
 brew install jq
 brew install tree
+# docker image 分析工具
+if [ `command -v dive` ]; then
+  echo "升级dive..."
+  brew upgrade dive
+else
+  echo "安装dive..."
+  brew install dive
+fi
 
 #按照git辅助工具
 npm install -g commitizen
 npm install -g cz-customizable
 
-#更新过期的Formule
-brew upgrade
 
 #安装 Cask(https://github.com/caskroom/homebrew-cask)
-brew tap caskroom/cask
+brew tap homebrew/cask-cask
 #brew tap caskroom/versions
 
 
@@ -87,8 +106,8 @@ brew cask install --appdir="/Applications" docker
 brew cask install --appdir="/Applications" minikube
 brew cask install --appdir="/Applications" postman
 # 安装lazygit(https://github.com/jesseduffield/lazygit)
-brew tap jesseduffield/lazygit
-brew install lazygit
+#brew tap jesseduffield/lazygit
+#brew install lazygit
 
 #安装其他常用工具
 brew cask install --appdir="/Applications" google-chrome
@@ -109,8 +128,8 @@ brew cask install --appdir="/Applications" macdown
 #brew cask install --appdir="/Applications" sketch
 brew cask install --appdir="/Applications" wireshark
 
-## 安装shadowsocksx(配置参考备忘)
-brew cask install --appdir="/Applications" shadowsocksx-ng
+## 安装shadowsocksx(配置参考shadowfly.us官网)
+brew cask install --appdir="/Applications" clashx
 
 brew cask install --appdir="/Applications" go2shell
 brew cask install --appdir="/Applications" drawio
@@ -122,10 +141,6 @@ brew cask install --appdir="/Applications" drawio
 #brew tap clangen/musikcube
 #brew install musikcube
 
-#更新过期的cask(https://github.com/buo/homebrew-cask-upgrade)
-brew tap buo/cask-upgrade
-brew update
-brew cu -a -y
 
 #删除过期的文件
 brew cleanup
