@@ -66,11 +66,11 @@ else
 fi
 
 if [ `command -v kubectl` ]; then
-  echo "升级 kubectl..."
-  brew upgrade kubectl
+  echo "升级 kubernetes-cli..."
+  brew upgrade kubernetes-cli
 else
-  echo "安装 kubectl..."
-  brew install kubectl
+  echo "安装 kubernetes-cli..."
+  brew install kubernetes-cli
 fi
 
 f [ `command -v node` ]; then
@@ -140,11 +140,20 @@ fi
 
 # docker image 分析工具
 if [ `command -v dive` ]; then
-  echo "升级dive..."
+  echo "升级 dive..."
   brew upgrade dive
 else
-  echo "安装dive..."
+  echo "安装 dive..."
   brew install dive
+fi
+
+if [ `command -v spring` ]; then
+  echo "升级 spring-boot..."
+  brew upgrade springboot
+else
+  echo "安装 spring-boot..."
+  brew tap pivotal/tap
+  brew install springboot
 fi
 
 #按照git辅助工具
