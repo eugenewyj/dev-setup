@@ -170,24 +170,24 @@ brew tap homebrew/cask-cask
 brew update
 
 #Core casks
-brew cask install --appdir="/Applications" alfred
+#brew cask install --appdir="/Applications" alfred
 # brew cask install --appdir="/Applications" iterm2
 
 #安装字体
-brew cask install font-source-code-pro
-brew cask install font-fira-code
+#brew cask install font-source-code-pro
+#brew cask install font-fira-code
 
 #安装开发工具
 brew cask install java
 #brew cask install --appdir="/Applications" macvim
 # 删除sublime-text,改用vs code。
 #brew cask install --appdir="/Applications" sublime-text
-brew cask install --appdir="/Applications" visual-studio-code
+brew install --cask visual-studio-code
 #brew cask install --appdir="/Applications" sequel-pro
-brew cask install --appdir="/Applications" virtualbox
-brew cask install --appdir="/Applications" vagrant
-brew cask install --appdir="/Applications" docker
-brew cask install --appdir="/Applications" minikube
+brew install --cask virtualbox
+brew install --cask vagrant
+#brew cask install --appdir="/Applications" docker
+#brew cask install --appdir="/Applications" minikube
 brew cask install --appdir="/Applications" postman
 # 安装lazygit(https://github.com/jesseduffield/lazygit)
 #brew tap jesseduffield/lazygit
@@ -199,7 +199,7 @@ brew cask install --appdir="/Applications" cheatsheet
 brew cask install --appdir="/Applications" sizeup
 #brew cask install --appdir="/Applications" xmind
 brew cask install --appdir="/Applications" the-unarchiver
-brew cask install --appdir="/Applications" appcleaner
+#brew cask install --appdir="/Applications" appcleaner
 brew cask install --appdir="/Applications" vlc
 brew cask install --appdir="/Applications" omnidisksweeper
 brew cask install --appdir="/Applications" cakebrew
@@ -208,7 +208,7 @@ brew cask install --appdir="/Applications" dictunifier
 # 删除calibre，因为有ibook和kindle很少用calibre。
 #brew cask install --appdir="/Applications" calibre
 brew cask install --appdir="/Applications" kindle
-brew cask install --appdir="/Applications" macdown
+#brew cask install --appdir="/Applications" macdown
 #brew cask install --appdir="/Applications" sketch
 brew cask install --appdir="/Applications" wireshark
 
@@ -216,7 +216,7 @@ brew cask install --appdir="/Applications" wireshark
 brew cask install --appdir="/Applications" clashx
 
 brew cask install --appdir="/Applications" go2shell
-brew cask install --appdir="/Applications" drawio
+#brew cask install --appdir="/Applications" drawio
 
 ## redis 桌面管理器
 #brew cask install --appdir="/Applications" rdm

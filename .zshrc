@@ -56,7 +56,7 @@ plugins=(
     git
     golang
     mvn
-    osx
+    macos
     vscode
     spring
     rust
@@ -116,9 +116,6 @@ source ~/.iterm2_shell_integration.zsh
 # zsh-completions path
 fpath=(/usr/local/share/zsh-completions $fpath)
 
-# 添加python3路径
-export PATH=$(python3 -m site --user-base)/bin:$PATH
-
 # 解决idea pipenv 报错：ValueError: unknown locale: UTF-8
 export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
@@ -131,10 +128,40 @@ export FLUTTER_STORAGE_BASE_URL=https://storage.flutter-io.cn
 
 # 添加 rustup
 export RUSTUP_DIST_SERVER=https://mirrors.tuna.tsinghua.edu.cn/rustup
-export RUSTUP_UPDATE_ROOT=https://mirrors.ustc.edu.cn/rust-static/rustup
 export RUST_SRC_PATH="$(rustc --print sysroot)/lib/rustlib/src/rust/src"
 export PATH="$HOME/.cargo/bin:$PATH"
 
 # brew 配置
 export HOMEBREW_BOTTLE_DOMAIN=https://mirrors.ustc.edu.cn/homebrew-bottles/
 export HOMEBREW_NO_AUTO_UPDATE=1
+
+# nvm 配置
+export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
+
+# jdk 配置
+export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_144.jdk/Contents/Home/
+export PATH=$JAVA_HOME/bin:$PATH
+
+# groovy 配置
+export GROOVY_HOME=/usr/local/opt/groovy/libexec
+export PATH=$GROOVY_HOME/bin:$PATH
+
+# maven 配置
+export M2_HOME=/usr/local/Cellar/maven/3.0.5
+export PATH=$M2_HOME/bin:$PATH
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+__conda_setup="$('/Users/eugene/anaconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    eval "$__conda_setup"
+else
+    if [ -f "/Users/eugene/anaconda3/etc/profile.d/conda.sh" ]; then
+        . "/Users/eugene/anaconda3/etc/profile.d/conda.sh"
+    else
+        export PATH="/Users/eugene/anaconda3/bin:$PATH"
+    fi
+fi
+unset __conda_setup
+# <<< conda initialize <<<
+
